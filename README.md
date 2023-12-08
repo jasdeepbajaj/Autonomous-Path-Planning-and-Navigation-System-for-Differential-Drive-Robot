@@ -17,6 +17,7 @@ The project consists of the following key components:
 ## Usage
 
 - **Prerequisites**: Make sure you have ROS2 installed and set up properly.
+- Clone this repositior in src folder of ROS2 workspace
 - Build the package using:
 
   ```bash
@@ -25,4 +26,6 @@ The project consists of the following key components:
 - Launch the project using:
 ```bash
    ros2 launch special_implementation robot_name:=ideal.robot world_name:=bricks.world
+
+- Change robot file names and world file names as per your requirement or you can create new worlds
 
