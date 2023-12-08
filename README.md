@@ -10,7 +10,7 @@ The project consists of the following key components:
 - **velocity_translator.py**: Node responsible for translating linear and angular velocities to left and right wheel velocities.
 - **prm_controller.py**: Implementation of a proportional controller for navigating the robot to move from start configuration to goal configuration.
 - **prm_planner.py**: A module for PRM-based path planning utilized by the prm_controller.py.
-- **launch.py**: Launch script to start the simulation environment by launching the nodes and configuring the robot parameters.
+- **launch.py**: Launch script to start the simulation environment by launching the nodes.
 
 
 
