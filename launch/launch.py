@@ -111,4 +111,4 @@ def generate_launch_description():
 
     return ld  
 
-#ros2 launch special_implementation robot_name:=ideal.robot world_name:=bricks.world
+#ros2 launch special_implementation launch.py robot_name:=normal.robot world_name:=brick.world

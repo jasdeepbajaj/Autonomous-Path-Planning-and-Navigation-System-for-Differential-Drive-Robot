@@ -7,10 +7,10 @@ import math
 from special_implementation.prm_planner import PRM_Planner
 import time
 
-KP_LINEAR = 6.0
-KP_ANGULAR = 5.0
+KP_LINEAR = 3.7
+KP_ANGULAR = 4.0
 
-DISTANCE_TOLERANCE = 0.05
+DISTANCE_TOLERANCE = 0.001
 ANGLE_TOLERANCE = 0.001
 
 
@@ -147,7 +147,7 @@ class PRM_Controller(Node):
         planner = PRM_Planner(self.world_path, self.start_coords, self.goal_coords, num_points= 200, min_distance=3.0)
 
         # Delay to allow the planner to compute the path
-        time.sleep(8)
+        # time.sleep(3)
 
         # Get computed path coordinates from the planner
         path = planner.path_coords
