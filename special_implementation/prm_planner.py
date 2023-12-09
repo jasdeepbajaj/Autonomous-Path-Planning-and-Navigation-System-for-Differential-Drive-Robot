@@ -94,10 +94,6 @@ class PRM_Planner:
         diag_bottom_left = int(min(x + 1, self.grid_array.shape[1] - 1)), int(min(y - 1, self.grid_array.shape[0]-1))
         diag_bottom_right = int(min(x - 1, self.grid_array.shape[1] - 1)), int(min(y - 1, self.grid_array.shape[0]-1))
 
-        # if self.grid_array[int(y)][int(x)] == 1 or self.grid_array[ext_x_point[1]][ext_x_point[0]] == 1 or self.grid_array[red_x_point[1]][red_x_point[0]] == 1 or self.grid_array[ext_y_point[1]][ext_y_point[0]] == 1 or self.grid_array[red_y_point[1]][red_y_point[0]] == 1 or self.grid_array[diag_top_left[1]][diag_top_left[0]] == 1 or self.grid_array[diag_top_right[1]][diag_top_right[0]] == 1 or self.grid_array[diag_bottom_left[1]][diag_bottom_left[0]] == 1 or self.grid_array[diag_bottom_right[1]][diag_bottom_right[0]]:
-        #     # Assuming 0 represents free space
-        #     return True
-        # return False
         if any(self.grid_array[int(point[1])][int(point[0])] == 1 for point in [point, ext_x_point, red_x_point, ext_y_point, red_y_point, diag_top_left, diag_top_right, diag_bottom_left, diag_bottom_right]):
             return True
         return False
@@ -147,7 +143,7 @@ class PRM_Planner:
 
     def is_connection_collision(self, a: int, b: int) -> bool:
         """
-        Checks if a connection between two points results in a collision with the obstacle
+        Checks if a connection between two points results in a collision with the obstacle using interpolation between two connection points
 
         Args:
             a (int): Index of the first point in random_points list.

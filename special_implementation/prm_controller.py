@@ -5,12 +5,11 @@ from geometry_msgs.msg import PoseStamped, Twist, Pose
 import numpy as np
 import math
 from special_implementation.prm_planner import PRM_Planner
-import time
 
-KP_LINEAR = 3.7
+KP_LINEAR = 5.0
 KP_ANGULAR = 4.0
 
-DISTANCE_TOLERANCE = 0.001
+DISTANCE_TOLERANCE = 0.005
 ANGLE_TOLERANCE = 0.001
 
 
